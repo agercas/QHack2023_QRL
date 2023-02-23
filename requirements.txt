@@ -1,0 +1,13 @@
+gym==0.21.0
+numpy~=1.23.5
+huggingface_hub
+pickle5
+tqdm
+stable-baselines3[extra]
+pygame
+matplotlib
+
+torch
+
+PennyLane
+PyYAML
