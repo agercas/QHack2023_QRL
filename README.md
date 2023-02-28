@@ -90,6 +90,9 @@ Implementation has a few hacks due to time constraints, so it shouldn't be used 
 The algorithms are implemented in `algorithms.q_learning` and `algorithms.qrl_classic`. 
 Code for running the algorithms is in  `experiments.part_1_.*`. 
 
+We also implemented TD-Lambda and compared its performance to Q-Learning (and by extension, QRL).
+Code for running the comparison is in `experiments.TD-Lambda vs QLearning.ipynb`.
+
 ### Experiments
 
 We train the agents using these algorithms on the `Frozen Lake` environment using 
@@ -119,7 +122,7 @@ learning might remain unstable. it is likely that with a more extensive hyperpar
 obtain parameters that lead to more consistent training. 
 On the other hand, QRL agent doesn't have this parameter, and once it finds a step that leads to the goal, 
 it updates the probability of this action to 1. 
- 
+
 Second, let us consider the non-deterministic setting. Due to the non-deterministic 
 nature of the environment, we do not expect the agent to find a consistent solution 
 in general (even though that is possible for some specific configurations). 
@@ -260,8 +263,8 @@ the DQN agent longer to learn than QL or QRL agent. The performance is better th
 that of QL agent. So either DQN is not the right algorithm for this policy or we just haven't found a good 
 hyperparameter configuration. 
 
-[//]: # (![DQN Frozen Lake Learning Curve Smooth]&#40;./images/dqn_learning_curve_frozen_lake.png&#41;)
-[//]: # (![DQN Frozen Lake Optuna Optimization]&#40;./images/dqn_optuna_opt_frozen_lake_default.png&#41;)
+[//]: # "![DQN Frozen Lake Learning Curve Smooth]&#40;./images/dqn_learning_curve_frozen_lake.png&#41;"
+[//]: # "![DQN Frozen Lake Optuna Optimization]&#40;./images/dqn_optuna_opt_frozen_lake_default.png&#41;"
 
 <p float="left">
   <img src="./images/dqn_optuna_opt_frozen_lake_default.png" width="400"  alt=""/>
